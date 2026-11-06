@@ -82,6 +82,7 @@ import androidx.compose.ui.unit.sp
 import co.edu.itm.manosquehablan.vivo.Senas
 import co.edu.itm.manosquehablan.vivo.textoAscii
 import co.edu.itm.manosquehablan.vivo.dibujarEscena
+import co.edu.itm.manosquehablan.vivo.dibujarVersion
 import co.edu.itm.manosquehablan.vivo.texto
 import java.util.concurrent.Executors
 
@@ -477,9 +478,9 @@ fun CamaraPractica(senas: Senas, modifier: Modifier, alResultado: (co.edu.itm.ma
 // INTENTAR SEÑA (4 versiones): la cámara con el grabador del traductor; al terminar la seña la analiza la
 // versión elegida. Si se cambia de versión, la última seña se vuelve a analizar sin repetirla.
 @Composable
-fun CamaraIntentar(
-    senas: Senas, versiones: co.edu.itm.manosquehablan.vivo.Versiones4, version: Int, modifier: Modifier,
-    alResultado: (co.edu.itm.manosquehablan.vivo.Resultado) -> Unit
+internal fun CamaraIntentar(
+    senas: Senas, versiones: co.edu.itm.manosquehablan.vivo.Versiones4, version: Int, objetivo: String, modifier: Modifier,
+    alTerminar: (co.edu.itm.manosquehablan.vivo.Resultado, co.edu.itm.manosquehablan.vivo.Registro?, Int, Int) -> Unit
 ) {
     val contexto = LocalContext.current
     val ciclo = LocalLifecycleOwner.current
@@ -493,18 +494,34 @@ fun CamaraIntentar(
     val ejecutor = remember { Executors.newSingleThreadExecutor() }
     val detector = remember {
         DetectorHolistico(contexto, senas, alResultado = { escena = it }, alError = { error = it }).also { d ->
-            d.seguimiento.analizadorExterno = { r, w, h -> versiones.reconocer(r, w, h, versionActual.value) }
+            d.seguimiento.analizadorExterno = { r, w, h -> versiones.reconocer(r, w, h, versionActual.value, objetivo) }
         }
     }
     LaunchedEffect(Unit) { detector.seguimiento.cambiarModo(Modo.PRACTICAR) }
     DisposableEffect(Unit) { onDispose { ejecutor.shutdown(); detector.cerrar() } }
+    // al terminar la seña se entrega el resultado y la grabación (para re-analizarla con otra versión)
     val resultado = escena?.resultado
-    LaunchedEffect(resultado) { resultado?.let(alResultado) }
-    // otra versión: la misma seña analizada otra vez (sin volver a hacerla)
-    LaunchedEffect(version) {
+    LaunchedEffect(resultado) {
         val s = detector.seguimiento
-        val r = s.ultimoRegistro ?: return@LaunchedEffect
-        alResultado(withContext(Dispatchers.Default) { versiones.reconocer(r, s.ultimoAncho, s.ultimoAlto, version) })
+        resultado?.let { alTerminar(it, s.ultimoRegistro, s.ultimoAncho, s.ultimoAlto) }
+    }
+    // versión 3 y 4: el seguimiento de la palma y del codo mientras se graba (puntos crudos de MediaPipe)
+    val palmas = remember { listOf(mutableListOf<co.edu.itm.manosquehablan.vivo.P>(), mutableListOf()) }
+    val codos = remember { listOf(mutableListOf<co.edu.itm.manosquehablan.vivo.P>(), mutableListOf()) }
+    var grabando by remember { mutableStateOf(false) }
+    LaunchedEffect(escena) {
+        val e = escena ?: return@LaunchedEffect
+        val ahora = e.estado == Estado.GRABANDO
+        if (ahora && !grabando) { palmas.forEach { it.clear() }; codos.forEach { it.clear() } }
+        grabando = ahora
+        val d = e.deteccion ?: return@LaunchedEffect
+        if (!ahora) return@LaunchedEffect
+        fun px(q: FloatArray) = co.edu.itm.manosquehablan.vivo.P(q[0].toDouble() * e.ancho, q[1].toDouble() * e.alto)
+        for ((l, mano) in listOf(d.manoIzq, d.manoDer).withIndex()) if (mano.size >= 21) {
+            val pts = intArrayOf(0, 1, 5, 9, 13, 17).map { px(mano[it]) }
+            palmas[l] += co.edu.itm.manosquehablan.vivo.P(pts.sumOf { it.x } / pts.size, pts.sumOf { it.y } / pts.size)
+        }
+        if (d.pose.size > 14) for (l in 0..1) if (d.pose[13 + l][2] > 0.5f) codos[l] += px(d.pose[13 + l])
     }
 
     Box(modifier.background(Color.Black)) {
@@ -531,9 +548,12 @@ fun CamaraIntentar(
             }
         )
         Canvas(Modifier.fillMaxSize()) {
-            escena?.let { dibujarEscena(it) }
+            escena?.let { dibujarVersion(it, version, palmas, codos) }
             error?.let { texto(it, Offset(20f, size.height / 2), 0.6f, Color.Red, size.height / 720f, 2) }
         }
+        Text(co.edu.itm.manosquehablan.vivo.InfoVersiones.titulos.getValue(version), color = Color.White, fontSize = 15.sp,
+            fontWeight = FontWeight.Bold, modifier = Modifier.align(Alignment.BottomStart).padding(10.dp)
+                .background(Color.Black.copy(alpha = 0.6f), RoundedCornerShape(8.dp)).padding(horizontal = 8.dp, vertical = 3.dp))
     }
 }
 

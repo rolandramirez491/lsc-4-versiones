@@ -25,7 +25,11 @@ class Resultado(
     val parecidas: List<String> = emptyList(),     // PRACTICAR: hasta 7 señas parecidas
     // 4 versiones: lo que opina cada parte de la versión, en las señas de top (nombre de la parte -> %)
     val partes: Map<String, FloatArray> = emptyMap(),
-    val version: Int = 0
+    val version: Int = 0,
+    // la seña que se intentaba: en qué puesto quedó (1 = acertó), con qué probabilidad y lo que opinó cada parte
+    val objetivoPuesto: Int = 0,
+    val objetivoProb: Float = 0f,
+    val objetivoPartes: Map<String, Float> = emptyMap()
 )
 
 // Cascada v13 con el modelo del PC (ONNX): coordenadas + dibujo 1 (4 canales) + dibujo 2 (codo, 2 canales).

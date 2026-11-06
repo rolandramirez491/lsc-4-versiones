@@ -1400,7 +1400,8 @@ fun DrawScope.dibujarMunieco(
     sena: AvatarSena, frame: Int, area: Rect, puntos: Boolean, cara: Gestos? = null,
     apariencia: Apariencia = HOMBRE, dx: Float = 0f, sonriendo: Boolean = false,
     beso: Float = 0f,           // inclinacion de la cabeza para el beso
-    mostrarAngulo: Boolean = false   // pantalla LSC: arco y numero del angulo del codo
+    mostrarAngulo: Boolean = false,  // pantalla LSC: arco y numero del angulo del codo
+    version: Int = 0            // LSC 4 versiones: solo lo que ve esa version (0 = todo, como antes)
 ) {
     val ap = apariencia
     val parpadeo = cara?.parpadeo ?: 0f
@@ -1601,9 +1602,24 @@ fun DrawScope.dibujarMunieco(
             b.c.x + afuera * (radio + 6f) - (if (afuera < 0) ancho else 0f), b.c.y + pincel.textSize * 0.35f, pincel)
     }
 
+    // LSC 4 versiones: version 2 y 4 ven el brazo (hombro, codo y muñeca); 3 y 4 ven el lugar en la cara y el pecho
+    if (version == 2 || version == 4) for (b in brazos) {
+        val color = Color(255, 255, 255)
+        drawLine(color, b.hombro, b.c, maxOf(3f, escala * 0.02f)); drawLine(color, b.c, b.m, maxOf(3f, escala * 0.02f))
+        for (q in listOf(b.hombro, b.c, b.m)) { drawCircle(Color(0, 200, 255), maxOf(6f, escala * 0.035f), q); drawCircle(Color.White, maxOf(6f, escala * 0.035f), q, style = Stroke(2f)) }
+    }
+    if (version >= 3) {
+        // nariz, boca, mentón, frente, ojos, orejas y pecho (los lugares que mide la versión 3)
+        val lugares = listOf(Offset(0f, 0.15f), Offset(0f, 0.5f), Offset(0f, 0.92f), Offset(0f, -0.62f),
+            Offset(-0.38f, -0.12f), Offset(0.38f, -0.12f), Offset(-1.0f, 0.05f), Offset(1.0f, 0.05f))
+        for (q in lugares) drawCircle(Color(255, 215, 0), maxOf(5f, r * 0.07f), centroCabeza + Offset(q.x * r, q.y * r))
+        drawCircle(Color(255, 215, 0), maxOf(5f, r * 0.07f), a(0.0, 0.45))
+    }
+
     // 7) trazos del codo (dorado) y de la mano, encima del muñeco
     //    el de la mano es el FINAL (como lo recibe el modelo, sin cortes) si la seña lo trae
-    if (!sena.sinTrazo) for ((l, hombro) in listOf(0 to hi, 1 to hd)) {
+    //    (LSC 4 versiones: solo la 3 y la 4 ven el dibujo de la seña)
+    if (!sena.sinTrazo && (version == 0 || version >= 3)) for ((l, hombro) in listOf(0 to hi, 1 to hd)) {
         val d = sena.lados[l] ?: continue
         val f = frame.coerceIn(0, d.muneca.size - 1)
         if (f > 0) {

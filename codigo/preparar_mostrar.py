@@ -20,6 +20,43 @@ MAPA50 = PAQUETE / "datos_originales" / "mapa_etiquetas_lsc50.json"
 ALTO_CLIP = 240
 
 
+def puntos_por_version(archivo):
+    """Lo que ve cada versión, cuadro a cuadro, para dibujarlo ENCIMA DEL VIDEO (escala 1280x720 = el video):
+      manos (21 puntos), muñecas, codos y hombros (versión 2) y, de la versión 3, el trazo de la palma,
+      el del codo (solo en los cuadros de la seña) y los 11 puntos de la cara."""
+    import dibujo_senas as D
+    m = dict(np.load(archivo, allow_pickle=False))
+    T = len(m["muneca_izq"])
+    fps = T / D.SEGUNDOS_MUESTRA
+    ancho = float(np.median(m["ancho_hombros"]))
+    centro = np.median(m["centro_hombros"], axis=0)
+    r = lambda a: np.round(np.asarray(a, np.float64), 1).tolist()
+    salida = {"T": T, "ancho_ref": 1280, "alto_ref": 720,
+              "hombros": r([centro + [0.5 * ancho, 0], centro - [0.5 * ancho, 0]]),
+              "cara": r(m["cara"]), "cara_ok": np.asarray(m["cara_ok"], bool).tolist(), "lados": []}
+    manos, manos_ok = D.corregir_manos_grabacion([m["mano_izq"], m["mano_der"]], [m["mano_izq_ok"], m["mano_der_ok"]],
+                                                 [m["muneca_izq"], m["muneca_der"]], [m["valida_izq"], m["valida_der"]])
+    for l, s in enumerate(("izq", "der")):
+        brazo, bok = np.asarray(m[f"muneca_{s}"], np.float64), np.asarray(m[f"valida_{s}"], bool)
+        # versión 3 (igual que experimento_versiones con la configuración V14)
+        mok = D.filtrar_mano(manos[l], manos_ok[l], ancho, fps, m["cara"], m["cara_ok"])
+        mano = D.suavizar_manos(manos[l], mok, fps)
+        limpio, valida = D.limpiar_recorrido(brazo, bok, ancho, fps, mano, mok)
+        palma = np.where(mok[:, None], D.centro_palma(mano), limpio)
+        D._QUITAR_REPOSO[0] = False
+        indices = D.indices_activos(palma, valida, centro, ancho, m[f"codo_{s}"], m[f"codo_{s}_ok"])
+        D._QUITAR_REPOSO[0] = True
+        activo = np.zeros(T, bool)
+        activo[indices] = True
+        pb, vb = D.recorrido_antebrazo(brazo, bok, m[f"codo_{s}"], m[f"codo_{s}_ok"], ancho, fps)
+        salida["lados"].append({
+            "mano": r(m[f"mano_{s}"]), "mano_ok": np.asarray(m[f"mano_{s}_ok"], bool).tolist(),
+            "muneca": r(brazo), "codo": r(m[f"codo_{s}"]),
+            "palma": r(palma), "palma_ok": (activo & valida).tolist(), "trazo_codo": r(pb), "trazo_codo_ok": (activo & vb).tolist(),
+        })
+    return salida
+
+
 def main():
     if len(sys.argv) < 3:
         raise SystemExit(__doc__)
@@ -42,14 +79,19 @@ def main():
         with np.load(archivo, allow_pickle=False) as z:
             nombre, clase = str(z["nombre"]), int(z["clase"])
         sena = A.preparar(archivo)
+        # SIN ESPEJO: el muñeco se ve como la persona del video (de frente, no como en un espejo):
+        # x al revés y cada brazo al otro lado
+        sin_espejo = lambda a: None if a is None else (np.asarray(a, np.float64) * [-1.0, 1.0])
         lados = {}
-        for clave, d in zip(("izq", "der"), sena["lados"]):
+        for clave, d in zip(("der", "izq"), sena["lados"]):
             if d is None:
                 continue
-            lados[clave] = {k: redondo(d.get(k)) for k in ("muneca", "codo", "mano", "trazo")}
+            lados[clave] = {k: redondo(sin_espejo(d.get(k))) for k in ("muneca", "codo", "mano", "trazo")}
             lados[clave]["trazo_ok"] = np.asarray(d.get("trazo_ok", []), bool).tolist()
+        giro = sena.get("giro")
         avatar = {"muestra": archivo.name, "T": int(sena["T"]), "fps": float(sena["fps"]), "lados": lados,
-                  "giro": redondo(sena.get("giro")), "nariz": redondo(sena.get("nariz")), "clip": False}
+                  "giro": redondo(None if giro is None else -np.asarray(giro, np.float64)),
+                  "nariz": redondo(sin_espejo(sena.get("nariz"))), "clip": False}
         destino = DESTINO / nombre_carpeta(nombre)
         destino.mkdir(exist_ok=True)
 
@@ -74,13 +116,13 @@ def main():
                     output_params=["-crf", "28", "-preset", "slow", "-pix_fmt", "yuv420p", "-movflags", "+faststart", "-an"])
                 escritor.send(None)
                 for i in range(T):                       # el cuadro i del video va con el cuadro i del muñeco
-                    c = cuadros[int(round(i * (len(cuadros) - 1) / max(1, T - 1)))]
-                    c = cv2.flip(c, 1)                    # en espejo, como en APRENDER
+                    c = cuadros[int(round(i * (len(cuadros) - 1) / max(1, T - 1)))]   # sin espejo
                     escritor.send(np.ascontiguousarray(cv2.cvtColor(cv2.resize(c, tam, interpolation=cv2.INTER_AREA),
                                                                     cv2.COLOR_BGR2RGB)))
                 escritor.close()
                 avatar["clip"] = True
         (destino / "avatar.json").write_text(json.dumps(avatar, separators=(",", ":")), encoding="utf-8")
+        (destino / "puntos.json").write_text(json.dumps(puntos_por_version(archivo), separators=(",", ":")), encoding="utf-8")
         indice.append({"clase": clase, "nombre": nombre, "carpeta": nombre_carpeta(nombre), "video": avatar["clip"]})
         print(f"  {clase:02d} {nombre}: muñeco" + (" + video" if avatar["clip"] else ""))
     (DESTINO.parent / "senas_90.json").write_text(json.dumps(indice, ensure_ascii=False, indent=1), encoding="utf-8")

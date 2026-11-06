@@ -160,12 +160,20 @@ class Reconocedor:
         p4 = X.fusionar(p2[None], p3[None], self.g["peso_fusion"])[0]
         return p4, {"Versión 2": p2, "Versión 3": p3}
 
-    def reconocer(self, registro, version, ancho, alto, top=TOP):
-        """registro en vivo -> las `top` señas más parecidas y lo que opina cada parte (en %)."""
+    def reconocer(self, registro, version, ancho, alto, top=TOP, objetivo=None):
+        """registro en vivo -> las `top` señas más parecidas y lo que opina cada parte (en %).
+        Con `objetivo` (la seña que se intentaba) dice también en qué puesto quedó y con cuánto."""
         p, partes = self.probabilidades(registro_a_muestra(registro, ancho, alto), version)
-        orden = np.argsort(-p)[:top]
-        return {"top": [(self.nombres[i], float(p[i] * 100)) for i in orden],
-                "partes": {k: {self.nombres[i]: float(v[i] * 100) for i in orden} for k, v in partes.items()}}
+        todos = np.argsort(-p)
+        orden = todos[:top]
+        r = {"top": [(self.nombres[i], float(p[i] * 100)) for i in orden],
+             "partes": {k: {self.nombres[i]: float(v[i] * 100) for i in orden} for k, v in partes.items()}}
+        if objetivo is not None:
+            o = next((i for i, n in enumerate(self.nombres) if D.texto_ascii(n) == D.texto_ascii(objetivo)), None)
+            if o is not None:
+                r["objetivo"] = {"nombre": self.nombres[o], "puesto": int(np.where(todos == o)[0][0]) + 1,
+                                 "pct": float(p[o] * 100), "partes": {k: float(v[o] * 100) for k, v in partes.items()}}
+        return r
 
 
 if __name__ == "__main__":

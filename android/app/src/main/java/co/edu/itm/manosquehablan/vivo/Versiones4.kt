@@ -101,15 +101,20 @@ class Versiones4(contexto: Context) {
 
     // de la grabación en vivo a las 4 señas más parecidas (top en 0..1; partes en el mismo orden que top)
     @Synchronized
-    internal fun reconocer(r: Registro, ancho: Int, alto: Int, version: Int, top: Int = 4): Resultado {
+    internal fun reconocer(r: Registro, ancho: Int, alto: Int, version: Int, objetivo: String? = null, top: Int = 4): Resultado {
         val g = grabacionDeRegistro(r, ancho, alto) ?: return Resultado(error = "NO SE VE EL CUERPO", version = version)
         if ((0..1).none { l -> g.manosOk[l].any { it } || g.validas[l].any { it } }) return Resultado(error = "SUBE LAS MANOS", version = version)
         val (p, partes) = probabilidades(g, version)
-        val orden = p.indices.sortedByDescending { p[it] }.take(top)
+        val todos = p.indices.sortedByDescending { p[it] }
+        val orden = todos.take(top)
+        val o = objetivo?.let { n -> nombres.indexOfFirst { textoAscii(it) == textoAscii(n) } } ?: -1
         return Resultado(
             top = orden.map { nombres[it] to p[it] },
             partes = partes.mapValues { (_, v) -> FloatArray(orden.size) { v[orden[it]] } },
-            version = version
+            version = version,
+            objetivoPuesto = if (o >= 0) todos.indexOf(o) + 1 else 0,
+            objetivoProb = if (o >= 0) p[o] else 0f,
+            objetivoPartes = if (o >= 0) partes.mapValues { (_, v) -> v[o] } else emptyMap()
         )
     }
 }

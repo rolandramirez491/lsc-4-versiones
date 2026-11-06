@@ -338,6 +338,66 @@ private fun DrawScope.dibujarCara(e: Escena, espejo: (P) -> Offset, px: Float) {
     drawPoints(cara.map(espejo), PointMode.Points, color, strokeWidth = max(2 * px, 1.5f), cap = StrokeCap.Square)
 }
 
+// ---------------------------------------------------------------- LSC 4 versiones
+// Encima de la cámara SOLO lo que ve cada versión, con los puntos crudos de MediaPipe (sin filtros ni siluetas):
+//   1: los 21 puntos de cada mano · 2: + hombros, codos y muñecas · 3: manos + trazo de la palma, trazo del codo
+//   y los lugares de la cara y el pecho · 4: todo lo de la 2 y la 3.
+// trazos: por lado (izq, der) los puntos (en pixeles de la cámara) de la palma y del codo durante la grabación.
+fun DrawScope.dibujarVersion(e: Escena, version: Int, palmas: List<List<P>>, codos: List<List<P>>) {
+    if (e.ancho == 0) return
+    val esc = max(size.width / e.ancho, size.height / e.alto)
+    val dx = (size.width - e.ancho * esc) / 2f
+    val dy = (size.height - e.alto * esc) / 2f
+    fun espejo(p: P) = Offset(((e.ancho - 1 - p.x) * esc + dx).toFloat(), (p.y * esc + dy).toFloat())
+    fun norm(q: FloatArray) = espejo(P(q[0].toDouble() * e.ancho, q[1].toDouble() * e.alto))
+    val hp = size.height / 720f
+    val px = esc
+    val det = e.deteccion
+    if (det != null) {
+        // 2 y 4: el brazo (pose: hombros 11-12, codos 13-14, muñecas 15-16)
+        if ((version == 2 || version == 4) && det.pose.size > POSE_MUNECA_DER) {
+            val p = det.pose
+            for ((a, b) in listOf(11 to 12, 11 to 13, 13 to 15, 12 to 14, 14 to 16))
+                drawLine(Color.White, norm(p[a]), norm(p[b]), 3 * px, cap = StrokeCap.Round)
+            for (i in 11..16) { drawCircle(Color(0, 200, 255), 7 * px, norm(p[i])); drawCircle(Color.White, 7 * px, norm(p[i]), style = Stroke(2 * px)) }
+        }
+        // 3 y 4: los lugares de la cara (nariz, boca, mentón, frente, ojos, orejas)
+        if (version >= 3 && det.cara.size > CARA_REF.max()) for (i in CARA_REF) drawCircle(COLOR_DORADO, 4 * px, norm(det.cara[i]))
+        // todas: los 21 puntos de cada mano, tal cual los da MediaPipe
+        for ((mano, color) in listOf(det.manoIzq to COLOR_IZQ, det.manoDer to COLOR_DER)) {
+            if (mano.size < 21) continue
+            val q = mano.map(::norm)
+            for ((a, b) in CONEXIONES_MANO) drawLine(color, q[a], q[b], 2 * px, cap = StrokeCap.Round)
+            for (o in q) { drawCircle(Color.White, 4 * px, o); drawCircle(color, 4 * px, o, style = Stroke(1 * px)) }
+        }
+    }
+    // 3 y 4: el trazo de la palma (lo que se dibuja) y el del codo (dorado)
+    if (version >= 3) {
+        for ((lado, t) in palmas.withIndex()) if (t.size > 1) {
+            val camino = Path().apply { val p0 = espejo(t[0]); moveTo(p0.x, p0.y); for (q in t.drop(1)) espejo(q).let { lineTo(it.x, it.y) } }
+            drawPath(camino, if (lado == 0) COLOR_IZQ else COLOR_DER, style = Stroke(4 * px, cap = StrokeCap.Round, join = StrokeJoin.Round))
+        }
+        for (t in codos) if (t.size > 1) {
+            val camino = Path().apply { val p0 = espejo(t[0]); moveTo(p0.x, p0.y); for (q in t.drop(1)) espejo(q).let { lineTo(it.x, it.y) } }
+            drawPath(camino, COLOR_TRAZO_ANTEBRAZO, style = Stroke(3 * px, cap = StrokeCap.Round, join = StrokeJoin.Round))
+        }
+    }
+    // el aviso (abre la boca, grabando, baja las manos) y el destello
+    fun hud(x: Double, y: Double) = Offset((x * hp).toFloat(), ((y + MARGEN_HUD) * hp).toFloat())
+    val rojo = Color(255, 0, 0)
+    when (e.estado) {
+        Estado.GRABANDO -> {
+            drawCircle(rojo, 14 * hp, hud(35.0, 38.0))
+            texto("GRABANDO %.1f s".format(max(e.restante, 0.0)), hud(60.0, 50.0), 0.9f, rojo, hp, 2)
+            e.mensaje?.let { texto(it, hud(60.0, 90.0), 0.7f, Color.White, hp, 2) }
+        }
+        Estado.ANALISIS -> texto("ANALIZANDO...", hud(20.0, 45.0), 0.9f, Color(255, 255, 0), hp, 2)
+        else -> texto(if (e.hayCuerpo) "ABRE LA BOCA Y HAZ LA SENA" else "NO SE VE EL CUERPO",
+            hud(20.0, 45.0), 0.8f, if (e.hayCuerpo) Color(0, 255, 0) else rojo, hp, 2)
+    }
+    e.destello?.let { dibujarDestello(e, it, ::espejo) }
+}
+
 // texto con borde negro
 fun DrawScope.texto(contenido: String, pos: Offset, escala: Float, color: Color, px: Float, grosor: Int = 1) {
     drawIntoCanvas { canvas ->

@@ -93,19 +93,23 @@ Tus gráficas y tablas quedan en `resultados/`. Las originales están en `result
 ```bash
 probar_en_vivo.bat
 ```
-1. Ponte frente a la cámara (que se vean la cara, los hombros y las manos).
-2. **Abre la boca:** empieza a grabar.
-3. Haz la seña y **baja las manos:** termina (o a los 5 segundos).
-4. A la izquierda aparecen las **4 señas más parecidas** con su porcentaje y lo que opina cada parte de la versión.
-5. Teclas **1, 2, 3, 4** (o los botones de arriba) para cambiar de versión. La última seña se vuelve a evaluar con la versión nueva, sin repetirla.
+1. A la derecha está la **seña que hay que intentar**: el video real (en las 50 de LSC50), con lo que ve la versión dibujado encima. Con **← →** cambias de seña.
+2. Ponte frente a la cámara (que se vean la cara, los hombros y las manos). Encima de la cámara se dibuja **solo lo que ve la versión elegida**:
+   - **Versión 1:** los 21 puntos de cada mano, tal cual los da MediaPipe.
+   - **Versión 2:** lo mismo, más los hombros, codos y muñecas.
+   - **Versión 3:** las manos, el trazo de la palma, el trazo del codo y los lugares de la cara y el pecho.
+   - **Versión 4:** todo.
+3. **Abre la boca:** empieza a grabar. Haz la seña y **baja las manos:** termina (o a los 5 segundos).
+4. La cámara se va y queda el **resultado**: si acertaste, en qué puesto quedó tu seña y con qué %, y las **4 más parecidas** con el % de cada parte de la versión.
+5. Teclas **1, 2, 3, 4** para cambiar de versión (la misma seña se vuelve a evaluar), **ESPACIO** para intentar otra vez y **ESC** para salir.
 
 ### 5. App del celular (Android)
 1. Descarga `LSC-4-versiones.apk` desde la página de **[Releases](https://github.com/rolandramirez491/lsc-4-versiones/releases)**.
 2. Ábrelo en el celular y acepta *"instalar apps de origen desconocido"*. Es una app aparte: no reemplaza ninguna otra.
 3. En la app:
    - Elige una de las **4 versiones**.
-   - **MOSTRAR SEÑAS:** las 90 señas, una a una, con el muñeco, y en las 50 de LSC50 también el video real.
-   - **INTENTAR SEÑA:** abre la cámara. Abre la boca, haz la seña y baja las manos. A la izquierda salen las 4 señas más parecidas, su porcentaje y el de cada parte de la versión. Puedes cambiar de versión (V1–V4) y la misma seña se vuelve a evaluar.
+   - **MOSTRAR SEÑAS:** las 90 señas, una a una, con el muñeco (sin espejo, de frente), y en las 50 de LSC50 también el video real. Encima del video y del muñeco se dibuja lo que ve la versión elegida (V1–V4).
+   - **INTENTAR SEÑA:** abre la cámara y dibuja encima solo lo que ve la versión. Abre la boca, haz la seña y baja las manos. La cámara se va y queda el resultado: si acertaste, en qué puesto quedó tu seña y las 4 más parecidas con el % de cada parte. **INTENTAR OTRA VEZ** vuelve a la cámara, **◀ VOLVER A LAS SEÑAS** regresa, y si cambias de versión (V1–V4) la misma seña se vuelve a evaluar.
 
 ---
 

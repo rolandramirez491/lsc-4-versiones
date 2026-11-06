@@ -53,7 +53,8 @@ class Escena(
     val hayCara: Boolean = true,
     val hombros: Pair<P, Double>? = null,                    // centro y ancho de los hombros (muñeco en vivo)
     val repetir: Triple<Array<Brazo>, Double, P>? = null,    // ultima seña reconocida (el muñeco la repite)
-    val repetirId: Int = 0
+    val repetirId: Int = 0,
+    val deteccion: Deteccion? = null      // LSC 4 versiones: los puntos CRUDOS de MediaPipe (sin filtros)
 )
 
 // datos de un cuadro (leer_frame)
@@ -348,7 +349,7 @@ class SeguimientoEnVivo(contexto: Context, val senas: Senas) {
                 (if (finSena.subio) "BAJA LAS MANOS PARA TERMINAR" else "HAZ LA SENA") else null,
             apertura != null,
             datos?.let { it.centroHombros to it.anchoHombros },
-            if (modo == Modo.TRADUCIR) ultimaSena else null, ultimaSenaId
+            if (modo == Modo.TRADUCIR) ultimaSena else null, ultimaSenaId, det
         )
     }
 
