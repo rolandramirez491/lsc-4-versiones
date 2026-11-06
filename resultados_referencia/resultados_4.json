@@ -1,0 +1,131 @@
+{
+ "semilla": 42,
+ "vueltas": 5,
+ "epocas": 150,
+ "paciencia": 25,
+ "muestras_probadas": 1800,
+ "pesos_fusion_por_vuelta": [
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  0.5
+ ],
+ "banco": "dataset 90 senas (LSC50 + LSC-54): 90 senas x 5 personas x 4 muestras",
+ "particion": "5 vueltas dejando una persona por fuera; en cada vuelta 1260 entrenamiento / 180 validacion / 360 prueba",
+ "configuraciones": [
+  {
+   "config": "B0",
+   "nombre": "Línea base: solo Hand Landmarker (21 puntos por mano)",
+   "acierto": 0.5527777777777778,
+   "ic95": [
+    0.5297197971876615,
+    0.5756109591270837
+   ],
+   "media_vueltas": 0.5527777777777778,
+   "desv_vueltas": 0.12931443160847214,
+   "top3": 0.6988888888888889,
+   "vueltas": [
+    0.4166666666666667,
+    0.37777777777777777,
+    0.6833333333333333,
+    0.6194444444444445,
+    0.6666666666666666
+   ]
+  },
+  {
+   "config": "M1",
+   "nombre": "+ cuerpo como referencia (muñecas, codos, medido desde los hombros)",
+   "acierto": 0.5916666666666667,
+   "ic95": [
+    0.5687874835941494,
+    0.6141554089525133
+   ],
+   "media_vueltas": 0.5916666666666666,
+   "desv_vueltas": 0.1126148248030964,
+   "top3": 0.7072222222222222,
+   "vueltas": [
+    0.4527777777777778,
+    0.45555555555555555,
+    0.6972222222222222,
+    0.6694444444444444,
+    0.6833333333333333
+   ]
+  },
+  {
+   "config": "M2",
+   "nombre": "+ dibujo de la seña, lugar respecto al cuerpo y la cara, dedos en 3 momentos",
+   "acierto": 0.575,
+   "ic95": [
+    0.5520265648880797,
+    0.5976539835591897
+   ],
+   "media_vueltas": 0.575,
+   "desv_vueltas": 0.1149745006619691,
+   "top3": 0.735,
+   "vueltas": [
+    0.5361111111111111,
+    0.37222222222222223,
+    0.6055555555555555,
+    0.6916666666666667,
+    0.6694444444444444
+   ]
+  },
+  {
+   "config": "M3",
+   "nombre": "Fusión M1 + M2",
+   "acierto": 0.6283333333333333,
+   "ic95": [
+    0.6057571246398817,
+    0.6503629249254458
+   ],
+   "media_vueltas": 0.6283333333333333,
+   "desv_vueltas": 0.1092256696641419,
+   "top3": 0.7527777777777778,
+   "vueltas": [
+    0.575,
+    0.4388888888888889,
+    0.6805555555555556,
+    0.7277777777777777,
+    0.7194444444444444
+   ]
+  }
+ ],
+ "comparaciones_mcnemar": [
+  {
+   "a": "B0",
+   "b": "M1",
+   "solo_a_acierta": 128,
+   "solo_b_acierta": 198,
+   "p_valor": 0.00012553065732449353
+  },
+  {
+   "a": "M1",
+   "b": "M2",
+   "solo_a_acierta": 235,
+   "solo_b_acierta": 205,
+   "p_valor": 0.16673875892369996
+  },
+  {
+   "a": "M2",
+   "b": "M3",
+   "solo_a_acierta": 40,
+   "solo_b_acierta": 136,
+   "p_valor": 1.944787522241384e-13
+  },
+  {
+   "a": "M1",
+   "b": "M3",
+   "solo_a_acierta": 122,
+   "solo_b_acierta": 188,
+   "p_valor": 0.00021181821274061778
+  },
+  {
+   "a": "B0",
+   "b": "M3",
+   "solo_a_acierta": 151,
+   "solo_b_acierta": 287,
+   "p_valor": 7.916203707831603e-11
+  }
+ ]
+}

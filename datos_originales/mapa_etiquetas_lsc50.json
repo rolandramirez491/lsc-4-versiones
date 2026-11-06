@@ -1,0 +1,307 @@
+{
+    "dataset": "LSC50",
+    "fuente": "Timestamps.xlsx incluido en el dataset LSC50",
+    "cantidad_clases": 50,
+    "etiquetas": [
+        {
+            "id": 0,
+            "etiqueta_modelo": "SENA_0000",
+            "nombre_lsc": "Gracias",
+            "nombre_tecnico": "gracias"
+        },
+        {
+            "id": 1,
+            "etiqueta_modelo": "SENA_0001",
+            "nombre_lsc": "Buenos Días",
+            "nombre_tecnico": "buenos_dias"
+        },
+        {
+            "id": 2,
+            "etiqueta_modelo": "SENA_0002",
+            "nombre_lsc": "Buenas Tardes",
+            "nombre_tecnico": "buenas_tardes"
+        },
+        {
+            "id": 3,
+            "etiqueta_modelo": "SENA_0003",
+            "nombre_lsc": "Buenas Noches",
+            "nombre_tecnico": "buenas_noches"
+        },
+        {
+            "id": 4,
+            "etiqueta_modelo": "SENA_0004",
+            "nombre_lsc": "Seña",
+            "nombre_tecnico": "sena"
+        },
+        {
+            "id": 5,
+            "etiqueta_modelo": "SENA_0005",
+            "nombre_lsc": "Nombre",
+            "nombre_tecnico": "nombre"
+        },
+        {
+            "id": 6,
+            "etiqueta_modelo": "SENA_0006",
+            "nombre_lsc": "Trabajar",
+            "nombre_tecnico": "trabajar"
+        },
+        {
+            "id": 7,
+            "etiqueta_modelo": "SENA_0007",
+            "nombre_lsc": "Comer",
+            "nombre_tecnico": "comer"
+        },
+        {
+            "id": 8,
+            "etiqueta_modelo": "SENA_0008",
+            "nombre_lsc": "Vivir",
+            "nombre_tecnico": "vivir"
+        },
+        {
+            "id": 9,
+            "etiqueta_modelo": "SENA_0009",
+            "nombre_lsc": "Poco",
+            "nombre_tecnico": "poco"
+        },
+        {
+            "id": 10,
+            "etiqueta_modelo": "SENA_0010",
+            "nombre_lsc": "Familia",
+            "nombre_tecnico": "familia"
+        },
+        {
+            "id": 11,
+            "etiqueta_modelo": "SENA_0011",
+            "nombre_lsc": "Personas",
+            "nombre_tecnico": "personas"
+        },
+        {
+            "id": 12,
+            "etiqueta_modelo": "SENA_0012",
+            "nombre_lsc": "Mujer",
+            "nombre_tecnico": "mujer"
+        },
+        {
+            "id": 13,
+            "etiqueta_modelo": "SENA_0013",
+            "nombre_lsc": "Hombre",
+            "nombre_tecnico": "hombre"
+        },
+        {
+            "id": 14,
+            "etiqueta_modelo": "SENA_0014",
+            "nombre_lsc": "Niño",
+            "nombre_tecnico": "nino"
+        },
+        {
+            "id": 15,
+            "etiqueta_modelo": "SENA_0015",
+            "nombre_lsc": "Niña",
+            "nombre_tecnico": "nina"
+        },
+        {
+            "id": 16,
+            "etiqueta_modelo": "SENA_0016",
+            "nombre_lsc": "Abuelo",
+            "nombre_tecnico": "abuelo"
+        },
+        {
+            "id": 17,
+            "etiqueta_modelo": "SENA_0017",
+            "nombre_lsc": "Tío",
+            "nombre_tecnico": "tio"
+        },
+        {
+            "id": 18,
+            "etiqueta_modelo": "SENA_0018",
+            "nombre_lsc": "Hermano",
+            "nombre_tecnico": "hermano"
+        },
+        {
+            "id": 19,
+            "etiqueta_modelo": "SENA_0019",
+            "nombre_lsc": "Hambre",
+            "nombre_tecnico": "hambre"
+        },
+        {
+            "id": 20,
+            "etiqueta_modelo": "SENA_0020",
+            "nombre_lsc": "Feliz",
+            "nombre_tecnico": "feliz"
+        },
+        {
+            "id": 21,
+            "etiqueta_modelo": "SENA_0021",
+            "nombre_lsc": "Contento",
+            "nombre_tecnico": "contento"
+        },
+        {
+            "id": 22,
+            "etiqueta_modelo": "SENA_0022",
+            "nombre_lsc": "Triste",
+            "nombre_tecnico": "triste"
+        },
+        {
+            "id": 23,
+            "etiqueta_modelo": "SENA_0023",
+            "nombre_lsc": "Aburrido",
+            "nombre_tecnico": "aburrido"
+        },
+        {
+            "id": 24,
+            "etiqueta_modelo": "SENA_0024",
+            "nombre_lsc": "Bien",
+            "nombre_tecnico": "bien"
+        },
+        {
+            "id": 25,
+            "etiqueta_modelo": "SENA_0025",
+            "nombre_lsc": "Mal",
+            "nombre_tecnico": "mal"
+        },
+        {
+            "id": 26,
+            "etiqueta_modelo": "SENA_0026",
+            "nombre_lsc": "¿Cómo estas?",
+            "nombre_tecnico": "como_estas"
+        },
+        {
+            "id": 27,
+            "etiqueta_modelo": "SENA_0027",
+            "nombre_lsc": "Más o menos",
+            "nombre_tecnico": "mas_o_menos"
+        },
+        {
+            "id": 28,
+            "etiqueta_modelo": "SENA_0028",
+            "nombre_lsc": "Sentir",
+            "nombre_tecnico": "sentir"
+        },
+        {
+            "id": 29,
+            "etiqueta_modelo": "SENA_0029",
+            "nombre_lsc": "Jucioso",
+            "nombre_tecnico": "jucioso"
+        },
+        {
+            "id": 30,
+            "etiqueta_modelo": "SENA_0030",
+            "nombre_lsc": "Hola",
+            "nombre_tecnico": "hola"
+        },
+        {
+            "id": 31,
+            "etiqueta_modelo": "SENA_0031",
+            "nombre_lsc": "Adiós",
+            "nombre_tecnico": "adios"
+        },
+        {
+            "id": 32,
+            "etiqueta_modelo": "SENA_0032",
+            "nombre_lsc": "Por favor",
+            "nombre_tecnico": "por_favor"
+        },
+        {
+            "id": 33,
+            "etiqueta_modelo": "SENA_0033",
+            "nombre_lsc": "Con Gusto",
+            "nombre_tecnico": "con_gusto"
+        },
+        {
+            "id": 34,
+            "etiqueta_modelo": "SENA_0034",
+            "nombre_lsc": "Bienvenido",
+            "nombre_tecnico": "bienvenido"
+        },
+        {
+            "id": 35,
+            "etiqueta_modelo": "SENA_0035",
+            "nombre_lsc": "Perdón",
+            "nombre_tecnico": "perdon"
+        },
+        {
+            "id": 36,
+            "etiqueta_modelo": "SENA_0036",
+            "nombre_lsc": "Permiso",
+            "nombre_tecnico": "permiso"
+        },
+        {
+            "id": 37,
+            "etiqueta_modelo": "SENA_0037",
+            "nombre_lsc": "Nunca",
+            "nombre_tecnico": "nunca"
+        },
+        {
+            "id": 38,
+            "etiqueta_modelo": "SENA_0038",
+            "nombre_lsc": "Yo",
+            "nombre_tecnico": "yo"
+        },
+        {
+            "id": 39,
+            "etiqueta_modelo": "SENA_0039",
+            "nombre_lsc": "Tú",
+            "nombre_tecnico": "tu"
+        },
+        {
+            "id": 40,
+            "etiqueta_modelo": "SENA_0040",
+            "nombre_lsc": "Ustedes",
+            "nombre_tecnico": "ustedes"
+        },
+        {
+            "id": 41,
+            "etiqueta_modelo": "SENA_0041",
+            "nombre_lsc": "¿Qué?",
+            "nombre_tecnico": "que"
+        },
+        {
+            "id": 42,
+            "etiqueta_modelo": "SENA_0042",
+            "nombre_lsc": "¿Cuándo?",
+            "nombre_tecnico": "cuando"
+        },
+        {
+            "id": 43,
+            "etiqueta_modelo": "SENA_0043",
+            "nombre_lsc": "¿Dónde?",
+            "nombre_tecnico": "donde"
+        },
+        {
+            "id": 44,
+            "etiqueta_modelo": "SENA_0044",
+            "nombre_lsc": "¿Cómo?",
+            "nombre_tecnico": "como"
+        },
+        {
+            "id": 45,
+            "etiqueta_modelo": "SENA_0045",
+            "nombre_lsc": "¿Por qué?",
+            "nombre_tecnico": "por_que"
+        },
+        {
+            "id": 46,
+            "etiqueta_modelo": "SENA_0046",
+            "nombre_lsc": "¿Quién?",
+            "nombre_tecnico": "quien"
+        },
+        {
+            "id": 47,
+            "etiqueta_modelo": "SENA_0047",
+            "nombre_lsc": "Diferente",
+            "nombre_tecnico": "diferente"
+        },
+        {
+            "id": 48,
+            "etiqueta_modelo": "SENA_0048",
+            "nombre_lsc": "Todos",
+            "nombre_tecnico": "todos"
+        },
+        {
+            "id": 49,
+            "etiqueta_modelo": "SENA_0049",
+            "nombre_lsc": "Mucho",
+            "nombre_tecnico": "mucho"
+        }
+    ]
+}

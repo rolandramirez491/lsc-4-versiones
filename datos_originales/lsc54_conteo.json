@@ -1,0 +1,943 @@
+{
+ "amarillo": {
+  "muestras": 309,
+  "personas": 21,
+  "por_persona": {
+   "Signer_1": 15,
+   "Signer_10": 15,
+   "Signer_11": 15,
+   "Signer_12": 15,
+   "Signer_13": 15,
+   "Signer_14": 15,
+   "Signer_15": 15,
+   "Signer_16": 15,
+   "Signer_17": 15,
+   "Signer_18": 15,
+   "Signer_19": 15,
+   "Signer_2": 15,
+   "Signer_20": 15,
+   "Signer_21": 9,
+   "Signer_3": 15,
+   "Signer_4": 15,
+   "Signer_5": 15,
+   "Signer_6": 15,
+   "Signer_7": 15,
+   "Signer_8": 15,
+   "Signer_9": 15
+  }
+ },
+ "azul": {
+  "muestras": 309,
+  "personas": 21,
+  "por_persona": {
+   "Signer_1": 15,
+   "Signer_10": 15,
+   "Signer_11": 15,
+   "Signer_12": 15,
+   "Signer_13": 15,
+   "Signer_14": 15,
+   "Signer_15": 15,
+   "Signer_16": 15,
+   "Signer_17": 15,
+   "Signer_18": 15,
+   "Signer_19": 15,
+   "Signer_2": 15,
+   "Signer_20": 15,
+   "Signer_21": 9,
+   "Signer_3": 15,
+   "Signer_4": 15,
+   "Signer_5": 15,
+   "Signer_6": 15,
+   "Signer_7": 15,
+   "Signer_8": 15,
+   "Signer_9": 15
+  }
+ },
+ "blanco": {
+  "muestras": 300,
+  "personas": 20,
+  "por_persona": {
+   "Signer_1": 15,
+   "Signer_10": 15,
+   "Signer_11": 15,
+   "Signer_12": 15,
+   "Signer_13": 15,
+   "Signer_14": 15,
+   "Signer_15": 15,
+   "Signer_16": 15,
+   "Signer_17": 15,
+   "Signer_18": 15,
+   "Signer_19": 15,
+   "Signer_2": 15,
+   "Signer_20": 15,
+   "Signer_3": 15,
+   "Signer_4": 15,
+   "Signer_5": 15,
+   "Signer_6": 15,
+   "Signer_7": 15,
+   "Signer_8": 15,
+   "Signer_9": 15
+  }
+ },
+ "cafe": {
+  "muestras": 309,
+  "personas": 21,
+  "por_persona": {
+   "Signer_1": 15,
+   "Signer_10": 15,
+   "Signer_11": 15,
+   "Signer_12": 15,
+   "Signer_13": 15,
+   "Signer_14": 15,
+   "Signer_15": 15,
+   "Signer_16": 15,
+   "Signer_17": 15,
+   "Signer_18": 15,
+   "Signer_19": 15,
+   "Signer_2": 15,
+   "Signer_20": 15,
+   "Signer_21": 9,
+   "Signer_3": 15,
+   "Signer_4": 15,
+   "Signer_5": 15,
+   "Signer_6": 15,
+   "Signer_7": 15,
+   "Signer_8": 15,
+   "Signer_9": 15
+  }
+ },
+ "gris": {
+  "muestras": 309,
+  "personas": 21,
+  "por_persona": {
+   "Signer_1": 15,
+   "Signer_10": 15,
+   "Signer_11": 15,
+   "Signer_12": 15,
+   "Signer_13": 15,
+   "Signer_14": 15,
+   "Signer_15": 15,
+   "Signer_16": 15,
+   "Signer_17": 15,
+   "Signer_18": 15,
+   "Signer_19": 15,
+   "Signer_2": 15,
+   "Signer_20": 15,
+   "Signer_21": 9,
+   "Signer_3": 15,
+   "Signer_4": 15,
+   "Signer_5": 15,
+   "Signer_6": 15,
+   "Signer_7": 15,
+   "Signer_8": 15,
+   "Signer_9": 15
+  }
+ },
+ "morado": {
+  "muestras": 309,
+  "personas": 21,
+  "por_persona": {
+   "Signer_1": 15,
+   "Signer_10": 15,
+   "Signer_11": 15,
+   "Signer_12": 15,
+   "Signer_13": 15,
+   "Signer_14": 15,
+   "Signer_15": 15,
+   "Signer_16": 15,
+   "Signer_17": 15,
+   "Signer_18": 15,
+   "Signer_19": 15,
+   "Signer_2": 15,
+   "Signer_20": 15,
+   "Signer_21": 9,
+   "Signer_3": 15,
+   "Signer_4": 15,
+   "Signer_5": 15,
+   "Signer_6": 15,
+   "Signer_7": 15,
+   "Signer_8": 15,
+   "Signer_9": 15
+  }
+ },
+ "naranja": {
+  "muestras": 309,
+  "personas": 21,
+  "por_persona": {
+   "Signer_1": 15,
+   "Signer_10": 15,
+   "Signer_11": 15,
+   "Signer_12": 15,
+   "Signer_13": 15,
+   "Signer_14": 15,
+   "Signer_15": 15,
+   "Signer_16": 15,
+   "Signer_17": 15,
+   "Signer_18": 15,
+   "Signer_19": 15,
+   "Signer_2": 15,
+   "Signer_20": 15,
+   "Signer_21": 9,
+   "Signer_3": 15,
+   "Signer_4": 15,
+   "Signer_5": 15,
+   "Signer_6": 15,
+   "Signer_7": 15,
+   "Signer_8": 15,
+   "Signer_9": 15
+  }
+ },
+ "negro": {
+  "muestras": 309,
+  "personas": 21,
+  "por_persona": {
+   "Signer_1": 15,
+   "Signer_10": 15,
+   "Signer_11": 15,
+   "Signer_12": 15,
+   "Signer_13": 15,
+   "Signer_14": 15,
+   "Signer_15": 15,
+   "Signer_16": 15,
+   "Signer_17": 15,
+   "Signer_18": 15,
+   "Signer_19": 15,
+   "Signer_2": 15,
+   "Signer_20": 15,
+   "Signer_21": 9,
+   "Signer_3": 15,
+   "Signer_4": 15,
+   "Signer_5": 15,
+   "Signer_6": 15,
+   "Signer_7": 15,
+   "Signer_8": 15,
+   "Signer_9": 15
+  }
+ },
+ "rojo": {
+  "muestras": 309,
+  "personas": 21,
+  "por_persona": {
+   "Signer_1": 15,
+   "Signer_10": 15,
+   "Signer_11": 15,
+   "Signer_12": 15,
+   "Signer_13": 15,
+   "Signer_14": 15,
+   "Signer_15": 15,
+   "Signer_16": 15,
+   "Signer_17": 15,
+   "Signer_18": 15,
+   "Signer_19": 15,
+   "Signer_2": 15,
+   "Signer_20": 15,
+   "Signer_21": 9,
+   "Signer_3": 15,
+   "Signer_4": 15,
+   "Signer_5": 15,
+   "Signer_6": 15,
+   "Signer_7": 15,
+   "Signer_8": 15,
+   "Signer_9": 15
+  }
+ },
+ "rosado": {
+  "muestras": 312,
+  "personas": 21,
+  "por_persona": {
+   "Signer_1": 15,
+   "Signer_10": 15,
+   "Signer_11": 15,
+   "Signer_12": 15,
+   "Signer_13": 15,
+   "Signer_14": 15,
+   "Signer_15": 15,
+   "Signer_16": 15,
+   "Signer_17": 15,
+   "Signer_18": 15,
+   "Signer_19": 15,
+   "Signer_2": 18,
+   "Signer_20": 15,
+   "Signer_21": 9,
+   "Signer_3": 15,
+   "Signer_4": 15,
+   "Signer_5": 15,
+   "Signer_6": 15,
+   "Signer_7": 15,
+   "Signer_8": 15,
+   "Signer_9": 15
+  }
+ },
+ "verde": {
+  "muestras": 309,
+  "personas": 21,
+  "por_persona": {
+   "Signer_1": 15,
+   "Signer_10": 15,
+   "Signer_11": 15,
+   "Signer_12": 15,
+   "Signer_13": 15,
+   "Signer_14": 15,
+   "Signer_15": 15,
+   "Signer_16": 15,
+   "Signer_17": 15,
+   "Signer_18": 15,
+   "Signer_19": 15,
+   "Signer_2": 15,
+   "Signer_20": 15,
+   "Signer_21": 9,
+   "Signer_3": 15,
+   "Signer_4": 15,
+   "Signer_5": 15,
+   "Signer_6": 15,
+   "Signer_7": 15,
+   "Signer_8": 15,
+   "Signer_9": 15
+  }
+ },
+ "apoyar": {
+  "muestras": 78,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 6,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "ayudar": {
+  "muestras": 81,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 9,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "baño": {
+  "muestras": 78,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 6,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "bien": {
+  "muestras": 81,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 9,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "bienvenido": {
+  "muestras": 84,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 12,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "buenas noches": {
+  "muestras": 90,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 18,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "buenas tardes": {
+  "muestras": 84,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 12,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "buenos dias": {
+  "muestras": 81,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 9,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "chao": {
+  "muestras": 84,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 12,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "como esta": {
+  "muestras": 87,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 15,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "con gusto": {
+  "muestras": 84,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 12,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "denada": {
+  "muestras": 87,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 15,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "esperar": {
+  "muestras": 81,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 9,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "excelente": {
+  "muestras": 81,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 9,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "gracias": {
+  "muestras": 78,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 6,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "hola": {
+  "muestras": 78,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 6,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "invitar": {
+  "muestras": 81,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 9,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "lo siento": {
+  "muestras": 84,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 12,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "mal": {
+  "muestras": 78,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 6,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "maso menos": {
+  "muestras": 84,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 12,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "muchas gracias": {
+  "muestras": 84,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 12,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "muy bien": {
+  "muestras": 78,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 6,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "muy mal": {
+  "muestras": 87,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 15,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "necesitar": {
+  "muestras": 78,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 6,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "no": {
+  "muestras": 84,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 12,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "perdon": {
+  "muestras": 78,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 6,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "perfecto": {
+  "muestras": 81,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 9,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "permiso": {
+  "muestras": 84,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 12,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "por favor": {
+  "muestras": 84,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 12,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "presentar": {
+  "muestras": 90,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 18,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "sentarse": {
+  "muestras": 84,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 12,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "si": {
+  "muestras": 78,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 6,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "tranquilo": {
+  "muestras": 78,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 6,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "cinco": {
+  "muestras": 84,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 12,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "cuatro": {
+  "muestras": 78,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 6,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "dies": {
+  "muestras": 87,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 12,
+   "Signer_19": 9,
+   "Signer_21": 12,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "dos": {
+  "muestras": 81,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 9,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "nueve": {
+  "muestras": 84,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 12,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "ocho": {
+  "muestras": 75,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 3,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "seis": {
+  "muestras": 81,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 9,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "siete": {
+  "muestras": 84,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 12,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "tres": {
+  "muestras": 84,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 12,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ },
+ "uno": {
+  "muestras": 78,
+  "personas": 9,
+  "por_persona": {
+   "Signer_1": 9,
+   "Signer_17": 6,
+   "Signer_19": 9,
+   "Signer_21": 9,
+   "Signer_22": 9,
+   "Signer_23": 9,
+   "Signer_24": 9,
+   "Signer_25": 9,
+   "Signer_3": 9
+  }
+ }
+}

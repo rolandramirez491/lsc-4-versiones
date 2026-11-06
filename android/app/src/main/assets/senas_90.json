@@ -1,0 +1,542 @@
+[
+ {
+  "clase": 0,
+  "nombre": "Gracias",
+  "carpeta": "GRACIAS",
+  "video": true
+ },
+ {
+  "clase": 1,
+  "nombre": "Buenos Días",
+  "carpeta": "BUENOS_DIAS",
+  "video": true
+ },
+ {
+  "clase": 2,
+  "nombre": "Buenas Tardes",
+  "carpeta": "BUENAS_TARDES",
+  "video": true
+ },
+ {
+  "clase": 3,
+  "nombre": "Buenas Noches",
+  "carpeta": "BUENAS_NOCHES",
+  "video": true
+ },
+ {
+  "clase": 4,
+  "nombre": "Seña",
+  "carpeta": "SENA",
+  "video": true
+ },
+ {
+  "clase": 5,
+  "nombre": "Nombre",
+  "carpeta": "NOMBRE",
+  "video": true
+ },
+ {
+  "clase": 6,
+  "nombre": "Trabajar",
+  "carpeta": "TRABAJAR",
+  "video": true
+ },
+ {
+  "clase": 7,
+  "nombre": "Comer",
+  "carpeta": "COMER",
+  "video": true
+ },
+ {
+  "clase": 8,
+  "nombre": "Vivir",
+  "carpeta": "VIVIR",
+  "video": true
+ },
+ {
+  "clase": 9,
+  "nombre": "Poco",
+  "carpeta": "POCO",
+  "video": true
+ },
+ {
+  "clase": 10,
+  "nombre": "Familia",
+  "carpeta": "FAMILIA",
+  "video": true
+ },
+ {
+  "clase": 11,
+  "nombre": "Personas",
+  "carpeta": "PERSONAS",
+  "video": true
+ },
+ {
+  "clase": 12,
+  "nombre": "Mujer",
+  "carpeta": "MUJER",
+  "video": true
+ },
+ {
+  "clase": 13,
+  "nombre": "Hombre",
+  "carpeta": "HOMBRE",
+  "video": true
+ },
+ {
+  "clase": 14,
+  "nombre": "Niño",
+  "carpeta": "NINO",
+  "video": true
+ },
+ {
+  "clase": 15,
+  "nombre": "Niña",
+  "carpeta": "NINA",
+  "video": true
+ },
+ {
+  "clase": 16,
+  "nombre": "Abuelo",
+  "carpeta": "ABUELO",
+  "video": true
+ },
+ {
+  "clase": 17,
+  "nombre": "Tío",
+  "carpeta": "TIO",
+  "video": true
+ },
+ {
+  "clase": 18,
+  "nombre": "Hermano",
+  "carpeta": "HERMANO",
+  "video": true
+ },
+ {
+  "clase": 19,
+  "nombre": "Hambre",
+  "carpeta": "HAMBRE",
+  "video": true
+ },
+ {
+  "clase": 20,
+  "nombre": "Feliz",
+  "carpeta": "FELIZ",
+  "video": true
+ },
+ {
+  "clase": 21,
+  "nombre": "Contento",
+  "carpeta": "CONTENTO",
+  "video": true
+ },
+ {
+  "clase": 22,
+  "nombre": "Triste",
+  "carpeta": "TRISTE",
+  "video": true
+ },
+ {
+  "clase": 23,
+  "nombre": "Aburrido",
+  "carpeta": "ABURRIDO",
+  "video": true
+ },
+ {
+  "clase": 24,
+  "nombre": "Bien",
+  "carpeta": "BIEN",
+  "video": true
+ },
+ {
+  "clase": 25,
+  "nombre": "Mal",
+  "carpeta": "MAL",
+  "video": true
+ },
+ {
+  "clase": 26,
+  "nombre": "Cómo estas",
+  "carpeta": "COMO_ESTAS",
+  "video": true
+ },
+ {
+  "clase": 27,
+  "nombre": "Más o menos",
+  "carpeta": "MAS_O_MENOS",
+  "video": true
+ },
+ {
+  "clase": 28,
+  "nombre": "Sentir",
+  "carpeta": "SENTIR",
+  "video": true
+ },
+ {
+  "clase": 29,
+  "nombre": "Juicioso",
+  "carpeta": "JUICIOSO",
+  "video": true
+ },
+ {
+  "clase": 30,
+  "nombre": "Hola",
+  "carpeta": "HOLA",
+  "video": true
+ },
+ {
+  "clase": 31,
+  "nombre": "Adiós",
+  "carpeta": "ADIOS",
+  "video": true
+ },
+ {
+  "clase": 32,
+  "nombre": "Por favor",
+  "carpeta": "POR_FAVOR",
+  "video": true
+ },
+ {
+  "clase": 33,
+  "nombre": "Con Gusto",
+  "carpeta": "CON_GUSTO",
+  "video": true
+ },
+ {
+  "clase": 34,
+  "nombre": "Bienvenido",
+  "carpeta": "BIENVENIDO",
+  "video": true
+ },
+ {
+  "clase": 35,
+  "nombre": "Perdón",
+  "carpeta": "PERDON",
+  "video": true
+ },
+ {
+  "clase": 36,
+  "nombre": "Permiso",
+  "carpeta": "PERMISO",
+  "video": true
+ },
+ {
+  "clase": 37,
+  "nombre": "Nunca",
+  "carpeta": "NUNCA",
+  "video": true
+ },
+ {
+  "clase": 38,
+  "nombre": "Yo",
+  "carpeta": "YO",
+  "video": true
+ },
+ {
+  "clase": 39,
+  "nombre": "Tú",
+  "carpeta": "TU",
+  "video": true
+ },
+ {
+  "clase": 40,
+  "nombre": "Ustedes",
+  "carpeta": "USTEDES",
+  "video": true
+ },
+ {
+  "clase": 41,
+  "nombre": "Qué",
+  "carpeta": "QUE",
+  "video": true
+ },
+ {
+  "clase": 42,
+  "nombre": "Cuándo",
+  "carpeta": "CUANDO",
+  "video": true
+ },
+ {
+  "clase": 43,
+  "nombre": "Dónde",
+  "carpeta": "DONDE",
+  "video": true
+ },
+ {
+  "clase": 44,
+  "nombre": "Cómo",
+  "carpeta": "COMO",
+  "video": true
+ },
+ {
+  "clase": 45,
+  "nombre": "Por qué",
+  "carpeta": "POR_QUE",
+  "video": true
+ },
+ {
+  "clase": 46,
+  "nombre": "Quién",
+  "carpeta": "QUIEN",
+  "video": true
+ },
+ {
+  "clase": 47,
+  "nombre": "Diferente",
+  "carpeta": "DIFERENTE",
+  "video": true
+ },
+ {
+  "clase": 48,
+  "nombre": "Todos",
+  "carpeta": "TODOS",
+  "video": true
+ },
+ {
+  "clase": 49,
+  "nombre": "Mucho",
+  "carpeta": "MUCHO",
+  "video": true
+ },
+ {
+  "clase": 50,
+  "nombre": "Amarillo",
+  "carpeta": "AMARILLO",
+  "video": false
+ },
+ {
+  "clase": 51,
+  "nombre": "Apoyar",
+  "carpeta": "APOYAR",
+  "video": false
+ },
+ {
+  "clase": 52,
+  "nombre": "Ayudar",
+  "carpeta": "AYUDAR",
+  "video": false
+ },
+ {
+  "clase": 53,
+  "nombre": "Azul",
+  "carpeta": "AZUL",
+  "video": false
+ },
+ {
+  "clase": 54,
+  "nombre": "Baño",
+  "carpeta": "BANO",
+  "video": false
+ },
+ {
+  "clase": 55,
+  "nombre": "Blanco",
+  "carpeta": "BLANCO",
+  "video": false
+ },
+ {
+  "clase": 56,
+  "nombre": "Café",
+  "carpeta": "CAFE",
+  "video": false
+ },
+ {
+  "clase": 57,
+  "nombre": "Chao",
+  "carpeta": "CHAO",
+  "video": false
+ },
+ {
+  "clase": 58,
+  "nombre": "Cinco",
+  "carpeta": "CINCO",
+  "video": false
+ },
+ {
+  "clase": 59,
+  "nombre": "Cuatro",
+  "carpeta": "CUATRO",
+  "video": false
+ },
+ {
+  "clase": 60,
+  "nombre": "De nada",
+  "carpeta": "DE_NADA",
+  "video": false
+ },
+ {
+  "clase": 61,
+  "nombre": "Diez",
+  "carpeta": "DIEZ",
+  "video": false
+ },
+ {
+  "clase": 62,
+  "nombre": "Dos",
+  "carpeta": "DOS",
+  "video": false
+ },
+ {
+  "clase": 63,
+  "nombre": "Esperar",
+  "carpeta": "ESPERAR",
+  "video": false
+ },
+ {
+  "clase": 64,
+  "nombre": "Excelente",
+  "carpeta": "EXCELENTE",
+  "video": false
+ },
+ {
+  "clase": 65,
+  "nombre": "Gris",
+  "carpeta": "GRIS",
+  "video": false
+ },
+ {
+  "clase": 66,
+  "nombre": "Invitar",
+  "carpeta": "INVITAR",
+  "video": false
+ },
+ {
+  "clase": 67,
+  "nombre": "Lo siento",
+  "carpeta": "LO_SIENTO",
+  "video": false
+ },
+ {
+  "clase": 68,
+  "nombre": "Morado",
+  "carpeta": "MORADO",
+  "video": false
+ },
+ {
+  "clase": 69,
+  "nombre": "Muchas gracias",
+  "carpeta": "MUCHAS_GRACIAS",
+  "video": false
+ },
+ {
+  "clase": 70,
+  "nombre": "Muy bien",
+  "carpeta": "MUY_BIEN",
+  "video": false
+ },
+ {
+  "clase": 71,
+  "nombre": "Muy mal",
+  "carpeta": "MUY_MAL",
+  "video": false
+ },
+ {
+  "clase": 72,
+  "nombre": "Naranja",
+  "carpeta": "NARANJA",
+  "video": false
+ },
+ {
+  "clase": 73,
+  "nombre": "Necesitar",
+  "carpeta": "NECESITAR",
+  "video": false
+ },
+ {
+  "clase": 74,
+  "nombre": "Negro",
+  "carpeta": "NEGRO",
+  "video": false
+ },
+ {
+  "clase": 75,
+  "nombre": "No",
+  "carpeta": "NO",
+  "video": false
+ },
+ {
+  "clase": 76,
+  "nombre": "Nueve",
+  "carpeta": "NUEVE",
+  "video": false
+ },
+ {
+  "clase": 77,
+  "nombre": "Ocho",
+  "carpeta": "OCHO",
+  "video": false
+ },
+ {
+  "clase": 78,
+  "nombre": "Perfecto",
+  "carpeta": "PERFECTO",
+  "video": false
+ },
+ {
+  "clase": 79,
+  "nombre": "Presentar",
+  "carpeta": "PRESENTAR",
+  "video": false
+ },
+ {
+  "clase": 80,
+  "nombre": "Rojo",
+  "carpeta": "ROJO",
+  "video": false
+ },
+ {
+  "clase": 81,
+  "nombre": "Rosado",
+  "carpeta": "ROSADO",
+  "video": false
+ },
+ {
+  "clase": 82,
+  "nombre": "Seis",
+  "carpeta": "SEIS",
+  "video": false
+ },
+ {
+  "clase": 83,
+  "nombre": "Sentarse",
+  "carpeta": "SENTARSE",
+  "video": false
+ },
+ {
+  "clase": 84,
+  "nombre": "Sí",
+  "carpeta": "SI",
+  "video": false
+ },
+ {
+  "clase": 85,
+  "nombre": "Siete",
+  "carpeta": "SIETE",
+  "video": false
+ },
+ {
+  "clase": 86,
+  "nombre": "Tranquilo",
+  "carpeta": "TRANQUILO",
+  "video": false
+ },
+ {
+  "clase": 87,
+  "nombre": "Tres",
+  "carpeta": "TRES",
+  "video": false
+ },
+ {
+  "clase": 88,
+  "nombre": "Uno",
+  "carpeta": "UNO",
+  "video": false
+ },
+ {
+  "clase": 89,
+  "nombre": "Verde",
+  "carpeta": "VERDE",
+  "video": false
+ }
+]

@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+# resultados nuevos (los originales están en resultados_referencia/)
+resultados/
+dataset 90 senas (reconstruido)/
+# LSC50 procesado (339 MB): va en el Release de GitHub
+datos_originales/lsc50_landmarks_60frames.npz
+# Android
+android/.gradle/
+android/.kotlin/
+android/build/
+android/app/build/
+android/local.properties
+android/.idea/
+*.apk

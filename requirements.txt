@@ -1,0 +1,15 @@
+# Versiones EXACTAS del experimento original (Python 3.11.17, Windows 11, NVIDIA RTX 3080 Ti Laptop)
+# Primero PyTorch con CUDA 11.8 (tarjeta NVIDIA):
+#   pip install torch==2.7.1 --index-url https://download.pytorch.org/whl/cu118
+# Sin tarjeta NVIDIA (más lento y los números pueden variar en décimas):
+#   pip install torch==2.7.1
+torch==2.7.1
+numpy==2.4.6
+opencv-python==5.0.0
+matplotlib==3.11.2
+ijson==3.5.1
+# para probar en vivo con la cámara
+mediapipe==1.1.0
+# para exportar al celular
+onnx==1.23.2
+onnxruntime==1.31.0

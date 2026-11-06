@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Ícono: el muñeco de APRENDER con las dos manos abiertas arriba.
+  Mismos colores que Avatar.kt: piel, sombra de piel, camisa azul, pelo y contorno;
+  puntas de los dedos verde (izquierda) y magenta (derecha) y trazo dorado como el del codo.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Trazos dorados del movimiento -->
+    <path android:strokeColor="#FFD700" android:strokeWidth="1.3" android:strokeLineCap="round" android:fillColor="#00000000"
+        android:pathData="M24,50Q20,38 26,29" />
+    <path android:strokeColor="#FFD700" android:strokeWidth="1.3" android:strokeLineCap="round" android:fillColor="#00000000"
+        android:pathData="M84,50Q88,38 82,29" />
+
+    <!-- Torso (camisa) -->
+    <path android:fillColor="#2D557D" android:strokeColor="#3C2D28" android:strokeWidth="1.2"
+        android:pathData="M40,68Q54,64 68,68L73,98L35,98Z" />
+    <!-- Cuello y escote -->
+    <path android:fillColor="#C39673" android:pathData="M51,58h6v9h-6z" />
+    <path android:fillColor="#C39673" android:pathData="M50.5,66L54,71L57.5,66Z" />
+
+    <!-- Brazo izquierdo (en pantalla): manga y antebrazo con contorno -->
+    <path android:strokeColor="#3C2D28" android:strokeWidth="7.4" android:strokeLineCap="round" android:fillColor="#00000000" android:pathData="M43,70L33,62" />
+    <path android:strokeColor="#2D557D" android:strokeWidth="6" android:strokeLineCap="round" android:fillColor="#00000000" android:pathData="M43,70L33,62" />
+    <path android:strokeColor="#3C2D28" android:strokeWidth="6" android:strokeLineCap="round" android:fillColor="#00000000" android:pathData="M33,62L31,45" />
+    <path android:strokeColor="#E1B996" android:strokeWidth="4.6" android:strokeLineCap="round" android:fillColor="#00000000" android:pathData="M33,62L31,45" />
+
+    <!-- Brazo derecho -->
+    <path android:strokeColor="#3C2D28" android:strokeWidth="7.4" android:strokeLineCap="round" android:fillColor="#00000000" android:pathData="M65,70L75,62" />
+    <path android:strokeColor="#2D557D" android:strokeWidth="6" android:strokeLineCap="round" android:fillColor="#00000000" android:pathData="M65,70L75,62" />
+    <path android:strokeColor="#3C2D28" android:strokeWidth="6" android:strokeLineCap="round" android:fillColor="#00000000" android:pathData="M75,62L77,45" />
+    <path android:strokeColor="#E1B996" android:strokeWidth="4.6" android:strokeLineCap="round" android:fillColor="#00000000" android:pathData="M75,62L77,45" />
+
+    <!-- Mano izquierda abierta: contorno de los dedos, dedos y palma -->
+    <path android:strokeColor="#3C2D28" android:strokeWidth="3.4" android:strokeLineCap="round" android:fillColor="#00000000"
+        android:pathData="M28,37L26.5,31.5M30,36.3L29.6,30.2M32,36.3L32.6,30.4M34,37L35.2,32.2M34.5,40.5L38.2,37.6" />
+    <path android:strokeColor="#E1B996" android:strokeWidth="2.2" android:strokeLineCap="round" android:fillColor="#00000000"
+        android:pathData="M28,37L26.5,31.5M30,36.3L29.6,30.2M32,36.3L32.6,30.4M34,37L35.2,32.2M34.5,40.5L38.2,37.6" />
+    <path android:fillColor="#E1B996" android:strokeColor="#3C2D28" android:strokeWidth="0.8"
+        android:pathData="M26.6,40.5a4.4,4.2 0 1,0 8.8,0a4.4,4.2 0 1,0 -8.8,0" />
+    <path android:fillColor="#00FF00"
+        android:pathData="M25.8,31.5a0.8,0.8 0 1,0 1.6,0a0.8,0.8 0 1,0 -1.6,0M28.8,30.2a0.8,0.8 0 1,0 1.6,0a0.8,0.8 0 1,0 -1.6,0M31.8,30.4a0.8,0.8 0 1,0 1.6,0a0.8,0.8 0 1,0 -1.6,0M34.4,32.2a0.8,0.8 0 1,0 1.6,0a0.8,0.8 0 1,0 -1.6,0M37.4,37.6a0.8,0.8 0 1,0 1.6,0a0.8,0.8 0 1,0 -1.6,0" />
+
+    <!-- Mano derecha abierta (espejo) -->
+    <path android:strokeColor="#3C2D28" android:strokeWidth="3.4" android:strokeLineCap="round" android:fillColor="#00000000"
+        android:pathData="M80,37L81.5,31.5M78,36.3L78.4,30.2M76,36.3L75.4,30.4M74,37L72.8,32.2M73.5,40.5L69.8,37.6" />
+    <path android:strokeColor="#E1B996" android:strokeWidth="2.2" android:strokeLineCap="round" android:fillColor="#00000000"
+        android:pathData="M80,37L81.5,31.5M78,36.3L78.4,30.2M76,36.3L75.4,30.4M74,37L72.8,32.2M73.5,40.5L69.8,37.6" />
+    <path android:fillColor="#E1B996" android:strokeColor="#3C2D28" android:strokeWidth="0.8"
+        android:pathData="M72.6,40.5a4.4,4.2 0 1,0 8.8,0a4.4,4.2 0 1,0 -8.8,0" />
+    <path android:fillColor="#FF00FF"
+        android:pathData="M80.7,31.5a0.8,0.8 0 1,0 1.6,0a0.8,0.8 0 1,0 -1.6,0M77.6,30.2a0.8,0.8 0 1,0 1.6,0a0.8,0.8 0 1,0 -1.6,0M74.6,30.4a0.8,0.8 0 1,0 1.6,0a0.8,0.8 0 1,0 -1.6,0M72.0,32.2a0.8,0.8 0 1,0 1.6,0a0.8,0.8 0 1,0 -1.6,0M69.0,37.6a0.8,0.8 0 1,0 1.6,0a0.8,0.8 0 1,0 -1.6,0" />
+
+    <!-- Orejas -->
+    <path android:fillColor="#C39673" android:pathData="M44.2,51a1.4,2.4 0 1,0 2.8,0a1.4,2.4 0 1,0 -2.8,0" />
+    <path android:fillColor="#C39673" android:pathData="M61,51a1.4,2.4 0 1,0 2.8,0a1.4,2.4 0 1,0 -2.8,0" />
+    <!-- Cara -->
+    <path android:fillColor="#E1B996" android:strokeColor="#3C2D28" android:strokeWidth="1"
+        android:pathData="M45.8,50a8.2,10 0 1,0 16.4,0a8.2,10 0 1,0 -16.4,0" />
+    <!-- Pelo -->
+    <path android:fillColor="#1E1E23" android:pathData="M45.3,47.5a8.7,8 0 0,1 17.4,0Q54,43.5 45.3,47.5Z" />
+    <!-- Cejas -->
+    <path android:strokeColor="#1E1E23" android:strokeWidth="0.9" android:strokeLineCap="round" android:fillColor="#00000000"
+        android:pathData="M49.4,47.8L52.2,47.5M55.8,47.5L58.6,47.8" />
+    <!-- Ojos -->
+    <path android:fillColor="#FAFAFA"
+        android:pathData="M49.3,50.4a1.5,1 0 1,0 3,0a1.5,1 0 1,0 -3,0M55.7,50.4a1.5,1 0 1,0 3,0a1.5,1 0 1,0 -3,0" />
+    <path android:fillColor="#232D3C"
+        android:pathData="M50.1,50.4a0.7,0.7 0 1,0 1.4,0a0.7,0.7 0 1,0 -1.4,0M56.5,50.4a0.7,0.7 0 1,0 1.4,0a0.7,0.7 0 1,0 -1.4,0" />
+    <!-- Nariz -->
+    <path android:strokeColor="#C39673" android:strokeWidth="0.8" android:strokeLineCap="round" android:fillColor="#00000000"
+        android:pathData="M54,51.5L53.4,54.2L54.7,54.3" />
+    <!-- Sonrisa -->
+    <path android:strokeColor="#A04646" android:strokeWidth="1.2" android:strokeLineCap="round" android:fillColor="#00000000"
+        android:pathData="M50.6,56.3Q54,59.6 57.4,56.3" />
+</vector>
